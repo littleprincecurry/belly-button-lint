@@ -71,7 +71,7 @@ function buildPlot(id) {
         var data = [trace];
 
         var layout = {
-            title: 'Test',
+            title: 'Most Populous Microbial Species',
             paper_bgcolor: 'rgba(0,0,0,0)',
             plot_bgcolor: 'rgba(0,0,0,0)'
         };
