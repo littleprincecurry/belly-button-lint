@@ -3,11 +3,11 @@ var json = 'samples.json';
 d3.json(json).then(function (data) {
     var names = data.names;
     var id = d3.select('#selDataset');
-    var select;
     for (var i = 0; i < names.length; i++) {
         select = id.append('option').text(names[i]);
     };
 });
+
 
 d3.select('#selDataset').on('change', dropdownChoice);
 
@@ -73,7 +73,7 @@ function buildPlot(id) {
         var layout = {
             title: 'Most Populous Microbial Species',
             paper_bgcolor: 'rgba(0,0,0,0)',
-            plot_bgcolor: 'rgba(0,0,0,0)'
+            plot_bgcolor: 'rgba(0,0,0,0)',
         };
 
         Plotly.newPlot('bar', data, layout)
@@ -118,7 +118,6 @@ function buildBubble(id) {
         var data = [trace];
 
         var layout = {
-            title: 'test',
             paper_bgcolor: 'rgba(0,0,0,0)',
             plot_bgcolor: 'rgba(0,0,0,0)'
         };
@@ -197,7 +196,8 @@ function demoInfo(id) {
 };
 
 buildPlot('940');
-
-
+buildBubble('940');
+demoInfo('940');
+buildGauge('940');
 
 
